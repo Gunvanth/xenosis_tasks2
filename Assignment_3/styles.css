@@ -1,0 +1,94 @@
+/* General styles for the body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #aaabbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container styles */
+.container {
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+}
+
+/* Class to hide elements */
+.hidden {
+  display: none;
+}
+
+/* Styles for the main sections of the application */
+#welcome-screen, #quiz, #score-container {
+  background: #C5C6C7;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Question container styles */
+.question-container {
+  margin-bottom: 20px;
+}
+
+/* List styles for choices */
+#choices {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Styles for individual choice items */
+#choices li {
+  background-color: rgba(82, 85, 82, 0.616);
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Correct choice styling */
+#choices li.correct {
+  background-color: rgba(8, 177, 8, 0.521);
+  color: white;
+}
+
+/* Incorrect choice styling */
+#choices li.incorrect {
+  background-color: rgba(243, 37, 37, 0.527);
+  color: white;
+}
+
+/* Button styles */
+.btn {
+  background-color: #1F2833;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Button hover effect */
+.btn:hover {
+  background-color: #202c3a;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+  }
+}

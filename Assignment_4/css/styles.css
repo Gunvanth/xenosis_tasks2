@@ -1,0 +1,193 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic HTML and Body Styling */
+html, body {
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+}
+
+/* Flexbox Layout for Body */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Image Styling */
+.img {
+    width: 30cm;
+    height: 18cm;
+    object-fit: cover; /* Ensures the image fits within the specified dimensions */
+}
+
+/* Side Navigation Styling */
+#sideNav {
+    width: 150px;
+    background-color: #1c2127;
+    color: #bed4e9;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+#sideNav ul {
+    margin-top: 30%;
+    list-style-type: none;
+    padding: 0;
+}
+
+#sideNav li {
+    padding: 15px;
+}
+
+#sideNav a {
+    background-color: #1c2127;
+    color: #bed4e9;
+    text-decoration: none;
+}
+
+#sideNav a:hover {
+    color: #52616B;
+}
+
+#sideNav button {
+    display: none;
+    background-color: #1c2127;
+    color: #bed4e9;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#sideNav button:hover {
+    color: #52616B;
+}
+
+#sideNav button i {
+    font-size: 20px;
+}
+
+/* Main Content Area */
+main {
+    display: flex;
+    background-color: #ffffff;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#content {
+    flex: 1;
+    width: calc(100% - 150px);
+    margin-left: 150px;
+    transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+/* Header Styling */
+header {
+    background-color: #1c2127;
+    color: #bed4e9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2 {
+    margin: 15px;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #1c2127;
+    color: #bed4e9;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.footer__title {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.footer__social {
+    margin-top: 10px;
+}
+
+.footer__icon {
+    color: #bed4e9;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer__icon:hover {
+    color: #52616B;
+}
+
+.footer__icon i {
+    font-size: 1.5em;
+}
+
+/* Menu Button Styling */
+#menuButton {
+    background-color: #1E2022;
+    color: #bed4e9;
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#menuButton i {
+    margin: 15px;
+    font-size: 30px;
+    background-color: #1E2022;
+    color: #bed4e9;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    #sideNav {
+        transform: translateX(150px);
+        left: auto;
+        right: 0;
+    }
+
+    .img {
+        width: 10cm;
+        height: 7cm;
+        object-fit: cover; /* Ensures the image fits within the specified dimensions */
+    }
+
+    #content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #menuButton {
+        display: block;
+    }
+
+    #sideNav button {
+        display: block;
+    }
+}
+
+/* Active State for Side Navigation */
+#sideNav.active {
+    transform: translateX(0);
+}

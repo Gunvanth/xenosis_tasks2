@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do</h1>
+        <!-- Input for adding new tasks -->
+        <input type="text" id="new-task" placeholder="Add a new task...">
+        <!-- Input for selecting the date of the task -->
+        <input type="date" id="task-date">
+        <!-- Button to add a new task -->
+        <button id="add-task-button">Add Task</button>
+
+        <!-- Section for active tasks -->
+        <div class="task-section" id="active-tasks-section">
+            <h2>Tasks</h2>
+            <!-- List for active tasks -->
+            <ul id="task-list"></ul>
+            <!-- Message displayed when there are no active tasks -->
+            <p id="no-active-tasks" class="no-tasks-message">There are no active tasks</p>
+        </div>
+
+        <!-- Section for completed tasks -->
+        <div class="task-section" id="completed-tasks-section">
+            <h2>Completed Tasks</h2>
+            <!-- List for completed tasks -->
+            <ul id="completed-task-list"></ul>
+            <!-- Message displayed when there are no completed tasks -->
+            <p id="no-completed-tasks" class="no-tasks-message">There are no completed tasks</p>
+            <!-- Button to clear all completed tasks -->
+            <button id="clear-completed-button">Clear Completed</button>
+        </div>
+    </div>
+
+    <!-- Warning message for invalid input -->
+    <div id="warning-message" class="warning-message">
+        <span id="warning-text"></span>
+        <button id="warning-ok-button">OK</button>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

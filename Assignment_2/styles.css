@@ -1,0 +1,125 @@
+/* Reset box sizing and enable smooth scrolling */
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth; 
+}
+
+/* Style for the body */
+body {
+    background-color: #EBE9E1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* Style for the main content container */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+
+/* Style for the heading */
+h1 {
+    text-align: center;
+    margin: 30px;
+}
+
+/* Style for individual image containers */
+.image-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for image containers */
+.image-container:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
+
+/* Style for images */
+.content img {
+    object-fit: cover;
+    margin: 10px;
+    height: 200px;
+    width: 250px;
+    max-width: 100%;
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; 
+}
+
+/* Style for images when visible */
+.content img.visible {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+/* Style for the regenerate button */
+#regenerate-btn {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #E43D12;
+    color: #EBE9E1;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Hover effect for the regenerate button */
+#regenerate-btn:hover {
+    background-color: #E43D12;
+}
+
+/* Style for the download button */
+.download-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 12px;
+    border: none;
+    background-color: #E43D12;
+    color: #EBE9E1;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Hover effect for the download button */
+.download-btn:hover {
+    background-color: #E43D12;
+}
+
+/* Style for the footer */
+footer {
+    margin-top: 20px;
+    margin-bottom: 20PX;
+    text-align: center;
+    background-origin: padding-box;
+    padding: 10px;
+}
+
+/* Style for footer links */
+footer a {
+    color: #E43D12;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .content img {
+        height: 150px;
+        width: 150px;
+    }
+}

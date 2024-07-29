@@ -1,0 +1,86 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://kit.fontawesome.com/94eef430b8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <!--===== SIDENAV =====-->
+  <nav id="sideNav">
+    <ul>
+      <li><a href="index.html" onclick="toggleNav()">Home</a></li>
+      <li><a href="blog1.html" onclick="toggleNav()">GTA 6 Leaks</a></li>
+      <li><a href="blog2.html" onclick="toggleNav()">iPhone 16 Leaks</a></li>
+      <li><a href="blog3.html" onclick="toggleNav()">New AI Technologies 1</a></li>
+      <li><a href="blog4.html" onclick="toggleNav()">New AI Technologies 2</a></li>
+      <li><a href="blog5.html" onclick="toggleNav()">Nvidia's Rise</a></li>
+      <li><a href="blog6.html" onclick="toggleNav()">Lamborghini</a></li>
+    </ul>
+  </nav>
+  <div id="content" onclick="closeNavIfOpen(event)">
+    <!--===== HEADER =====-->
+    <header>
+      <h2>Gunvanth's Blogs</h2>
+      <button id="menuButton" onclick="toggleNav()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+
+    <!--===== MAIN CONTENT =====-->
+    <main>
+      <section>
+        <h1>Welcome to My Blogs</h1>
+        <div class="blog-list">
+          <br><br>
+          <div class="blog-item">
+            <a href="blog1.html"><img class="img" src="Pics/blog1.jpg" alt="GTA 6 Leaks"></a>
+            <h2><a href="blog1.html">GTA 6 Leaks</a></h2>
+            <p>Explore the latest leaks and rumors surrounding GTA 6, including its return to Vice City and groundbreaking gameplay features.</p>
+          </div><br><hr><br>
+          <div class="blog-item">
+            <a href="blog2.html"><img class="img" src="Pics/blog2.webp" alt="iPhone 16 Leaks"></a>
+            <h2><a href="blog2.html">iPhone 16 Leaks</a></h2>
+            <p>Discover the anticipated features and design changes in Apple's upcoming iPhone 16, based on the latest leaks and insider information.</p>
+          </div><br><hr><br>
+          <div class="blog-item">
+            <a href="blog3.html"><img class="img" src="Pics/blog3.jpg" alt="New AI Technologies 1"></a>
+            <h2><a href="blog3.html">New AI Technologies 1</a></h2>
+            <p>Delve into the newest advancements in AI technology, focusing on how these innovations are transforming various industries.</p>
+          </div><br><hr><br>
+          <div class="blog-item">
+            <a href="blog4.html"><img class="img" src="Pics/blog4.webp" alt="New AI Technologies 2"></a>
+            <h2><a href="blog4.html">New AI Technologies 2</a></h2>
+            <p>A continuation of our exploration into cutting-edge AI developments, highlighting key breakthroughs and their potential impact.</p>
+          </div><br><hr><br>
+          <div class="blog-item">
+            <a href="blog5.html"><img class="img" src="Pics/blog5.png" alt="Nvidia's Rise"></a>
+            <h2><a href="blog5.html">Nvidia's Rise</a></h2>
+            <p>Learn how Nvidia became a leading tech giant, its growth trajectory, and the factors driving its soaring market value.</p>
+          </div><br><hr><br>
+          <div class="blog-item">
+            <a href="blog6.html"><img class="img" src="Pics/blog6.jpg" alt="Lamborghini"></a>
+            <h2><a href="blog6.html">Lamborghini</a></h2>
+            <p>Uncover the history and evolution of Lamborghini, from its iconic supercars to its influence on the automotive industry.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+      <p class="footer__title">Gunvanth</p>
+      <div class="footer__social">
+        <a href="mailto:guna.konathala123@gmail.com" class="footer__icon"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://in.linkedin.com/in/gunvanth-konathala-785b5b1a3" class="footer__icon"><i class='fa-brands fa-linkedin'></i></a>
+        <a href="https://github.com/Gunvanth" class="footer__icon"><i class='fa-brands fa-github'></i></a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #C9D6DF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Styling for the container with glass effect */
+.container {
+    background: rgba(255, 255, 255, 0.5); /* Glass effect */
+    backdrop-filter: blur(10px); /* Glass effect */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    align-items: center;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+} 
+
+/* Styling for the main heading */
+h1 {
+    margin: 0 0 20px;
+}
+
+/* Styling for input elements */
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Basic button styling */
+button {
+    background-color: #52616B;
+    color: #C9D6DF;
+    margin-top: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #C9D6DF; 
+    color: #304350;
+}
+
+/* Styling for the task list */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling for each task item */
+li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+}
+
+/* Styling for completed tasks */
+li.completed {
+    color: #304350;
+}
+
+/* Styling for task details (text and datetime) */
+.task-details {
+    display: flex;
+    justify-content: space-between; /* Align name and date/time */
+    width: 100%;
+}
+
+.task-text {
+    text-align: left;
+}
+
+.task-datetime {
+    text-align: right;
+}
+
+/* Styling for buttons within tasks */
+.task-buttons {
+    display: flex;
+    gap: 0.5cm; /* Gap between buttons */
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Styling for task sections */
+.task-section {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Styling for messages when no tasks are present */
+.no-tasks-message {
+    color: #999;
+    font-style: normal;
+}
+
+/* Styling for warning message */
+.warning-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 0, 0, 0.9);
+    color: white;
+    padding: 1px;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Styling for warning message button */
+.warning-message button {
+    background-color: white;
+    color: red;
+    border: none;
+    padding: 5px 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Styling for complete task button */
+.complete-task-button {
+    background-color: #52616B;
+    color: #C9D6DF;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Hover effect for complete task button */
+.complete-task-button:hover {
+    background-color: #C9D6DF; 
+    color: #304350;
+}
+
+/* Disabled state for complete task button */
+.complete-task-button.disabled {
+    background-color: #d0d0d0; /* Light gray background */
+    color: #a0a0a0; /* Darker gray text */
+    cursor: not-allowed; /* Change cursor to indicate disabled state */
+}
+
+/* Add a class for the reveal effect */
+.task-item {
+    opacity: 0; /* Initially hide the task */
+    transform: translateY(20px); /* Move the task down initially */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth transition */
+}
+
+/* Add a class to reveal the task */
+.task-item.reveal {
+    opacity: 1; /* Make the task fully visible */
+    transform: translateY(0); /* Move the task to its original position */
+}
+
+/* Responsive styling for devices with a max-width of 768px */
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .task-section {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsive styling for devices with a max-width of 480px */
+@media only screen and (max-width: 480px) {
+    input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
